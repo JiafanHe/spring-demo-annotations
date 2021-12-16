@@ -6,15 +6,16 @@ import org.springframework.stereotype.Component;
 @Component("thatSillyCoach")  //the bean "id"
 public class TennisCoach implements Coach {
 	
+	@Autowired
 	private FortuneService fortuneService;
 	
 	// define a default constructor
 	public TennisCoach() {}
 	
-	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
 	
 //	@Autowired
 //	public TennisCoach(FortuneService theFortuneService) {
