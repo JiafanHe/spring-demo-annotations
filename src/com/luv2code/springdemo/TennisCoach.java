@@ -8,10 +8,18 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
+	// define a default constructor
+	public TennisCoach() {}
+	
 	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
 	}
+	
+//	@Autowired
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//	}
 
 	@Override
 	public String getDailyWorkout() {
