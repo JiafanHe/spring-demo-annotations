@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")  //the bean "id"
+@Component  //the bean "id"
 public class TennisCoach implements Coach {
 	
 	@Autowired
