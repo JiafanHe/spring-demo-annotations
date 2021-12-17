@@ -20,6 +20,8 @@ public class AnnotationBeanScopeDemoApp {
 		// check if they are the same
 		boolean result = theCoach == alphaCoach;
 		System.out.println(result);
+		
+		context.close();
 	}
 
 }
