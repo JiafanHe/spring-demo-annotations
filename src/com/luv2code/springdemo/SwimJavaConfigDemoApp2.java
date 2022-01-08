@@ -9,10 +9,10 @@ public class SwimJavaConfigDemoApp2 {
 		
 		// read spring config file
 		AnnotationConfigApplicationContext context = 
-				new AnnotationConfigApplicationContext(SportConfig.class);
+				new AnnotationConfigApplicationContext(TestConfig.class);
 		
 		// get the bean from spring container
-		Coach theCoach = context.getBean("swimCoach",Coach.class);
+		Coach theCoach = context.getBean("poolCoach",Coach.class);
 		
 		// call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
@@ -20,6 +20,10 @@ public class SwimJavaConfigDemoApp2 {
 		// call a method to get the daily fortune
 		System.out.println(theCoach.getDailyFortune());
 		
+//		// call methods to get new fields
+//		System.out.println(theCoach.getEmail());
+//		System.out.println(theCoach.getTeam());
+//		
 		// close the context
 		context.close();
 	}
